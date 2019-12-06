@@ -1,0 +1,9 @@
+type Query {
+  characters: [Character!]!
+    @httpGet(path: "https://swapi.co/api/people/")
+    @json(path: "$.result")
+}
+
+type Character {
+  name: String @json
+}
